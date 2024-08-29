@@ -190,4 +190,4 @@ API • Stripe • Apache FreeMarker
   the job. Some steps were skipped (like FSI/FMI deleter) because I started the job on an empty database.
 - developed and tested on Linux.
 - if you have any suggestions or found a bug please contact
-  me [here](https://andre-i.eu/#contactme)<img src="https://andre-i.eu:8080/api/v1/ipResource/custom.png?host=https://github.com/goto-eof/europea-library-server" />
+  me [here](https://andre-i.eu/#contactme)<img src="https://andre-i.eu/api/v1/ipResource/custom.png?host=https://github.com/goto-eof/europea-library-server" />
