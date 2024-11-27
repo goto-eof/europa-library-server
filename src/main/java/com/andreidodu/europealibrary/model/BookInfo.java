@@ -80,7 +80,7 @@ public class BookInfo extends ModelCommon {
     )
     private List<Category> categoryList;
 
-    @OneToOne(mappedBy = "bookInfo", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "bookInfo", fetch = FetchType.LAZY, optional = false)
     private FileSystemItemTopRatedView fileSystemItemTopRatedView;
 
     @Override

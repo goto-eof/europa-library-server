@@ -184,6 +184,7 @@ spring.freemarker.template-loader-path: file:src/main/resources/templates/
 
 logging:
   file:
+    max-size:level: 100MB
     name: /your/path/europea-library.log
   level:
     com:

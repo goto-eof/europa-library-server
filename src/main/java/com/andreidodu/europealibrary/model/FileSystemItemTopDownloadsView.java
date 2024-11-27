@@ -17,7 +17,7 @@ public class FileSystemItemTopDownloadsView {
     @Column(name = "row_number", updatable = false, nullable = false)
     private Long id;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "file_system_item_id", referencedColumnName = "id")
     private FileSystemItem fileSystemItem;
 

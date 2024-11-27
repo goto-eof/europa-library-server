@@ -28,7 +28,7 @@ public class FileMetaInfo extends ModelCommon {
     @Column(length = 4000)
     private String description;
 
-    @OneToOne(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "fileMetaInfo")
     private BookInfo bookInfo;
 
     @Column(name = "on_sale")
@@ -49,13 +49,13 @@ public class FileMetaInfo extends ModelCommon {
     @OneToMany(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY)
     private List<FileSystemItem> fileSystemItemList;
 
-    @OneToOne(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY, optional = false)
     private StripeProduct stripeProduct;
 
-    @OneToOne(mappedBy = "featuredFileMetaInfo", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "featuredFileMetaInfo", fetch = FetchType.LAZY, optional = false)
     private ApplicationSettings applicationSettings;
 
-    @OneToOne(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE})
+    @OneToOne(mappedBy = "fileMetaInfo", fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE}, optional = false)
     private FeaturedFileMetaInfo featuredFileMetaInfo;
 
     @Override

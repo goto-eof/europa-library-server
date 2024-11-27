@@ -37,7 +37,7 @@ public class ApplicationSettings {
     @Column(name = "home_page_w_popular_books_enabled")
     private Boolean popularBooksWidgetEnabled;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "featured_file_meta_info_id", referencedColumnName = "id")
     private FileMetaInfo featuredFileMetaInfo;
 

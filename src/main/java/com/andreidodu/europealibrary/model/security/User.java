@@ -46,7 +46,7 @@ public class User extends ModelCommon {
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST})
     private List<Authority> authorityList;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user",fetch = FetchType.LAZY, optional = false)
     private StripeCustomer stripeCustomer;
 
     @OneToMany(mappedBy = "user")

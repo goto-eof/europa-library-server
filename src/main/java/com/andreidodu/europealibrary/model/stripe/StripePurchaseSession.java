@@ -36,7 +36,7 @@ public class StripePurchaseSession extends ModelCommon {
     @JoinColumn(name = "stripe_price_id", referencedColumnName = "id", nullable = false)
     private StripePrice stripePrice;
 
-    @OneToOne(mappedBy = "stripePurchaseSession", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "stripePurchaseSession", fetch = FetchType.LAZY, optional = false)
     private StripeCustomerProductsOwned stripeCustomerProductsOwned;
 
     @Column(name = "stripe_payment_intent_id")
